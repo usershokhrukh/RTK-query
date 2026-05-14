@@ -1,0 +1,68 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Samsung TV 40 inch",
+      "category": "Electronics",
+      "price": 299.99,
+      "stock": 15,
+      "description": "High-definition smart TV with built-in streaming apps.",
+      "image": "https://example.com"
+    },
+    {
+      "id": "2",
+      "name": "Sony TV 50 inch",
+      "category": "Electronics",
+      "price": 499.99,
+      "stock": 8,
+      "description": "4K Ultra HD resolution for a cinematic experience.",
+      "image": "https://example.com"
+    },
+    {
+      "id": "3",
+      "name": "Sofa Set",
+      "category": "Furniture",
+      "price": 750,
+      "stock": 4,
+      "description": "Comfortable 3-seater fabric sofa for your living room.",
+      "image": "https://example.com"
+    },
+    {
+      "id": "4",
+      "name": "Essence Mascara",
+      "category": "Beauty",
+      "price": 9.99,
+      "stock": 50,
+      "description": "Long-lasting and cruelty-free lash mascara.",
+      "image": "https://example.com"
+    },
+    {
+      "id": "5",
+      "name": "Bean Bag",
+      "category": "Furniture",
+      "price": 45.5,
+      "stock": 22,
+      "description": "Soft bean bag for casual seating and relaxation.",
+      "image": "https://example.com"
+    },
+    {
+      "id": "j0pnTTvAq-Q",
+      "name": "Samsung TV 40 inch",
+      "category": "Electronics",
+      "price": 299.99,
+      "stock": 15,
+      "description": "High-definition smart TV with built-in streaming apps.",
+      "image": "https://example.com"
+    },
+    {
+      "id": "mDP-XDvYTFk",
+      "name": "Samsung TV 40 inch",
+      "category": "Electronics",
+      "price": 299.99,
+      "stock": 15,
+      "description": "High-definition smart TV with built-in streaming apps.",
+      "image": "https://example.com"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
