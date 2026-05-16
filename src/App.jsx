@@ -1,32 +1,30 @@
-import React, {useEffect} from "react";
-import {
-  useAddProductsMutation,
-  useGetProductsQuery,
-} from "./features/QueryProducts";
+import React from 'react'
+import { useGetProductsQuery } from './features/QueryProducts'
 
 const App = () => {
-  const {data, error, isLoading, refetch} = useGetProductsQuery();
 
-  const [addProduct, {data: addData, error: addError, isLoading: addLoading}] =
-    useAddProductsMutation();
+  const {data: products, error, isError, isLoading, isFetching, isSuccess} = useGetProductsQuery()
 
-  useEffect(() => {
-    addProduct({
-      id: "1",
-      name: "Samsung TV 40 inch",
-      category: "Electronics",
-      price: 299.99,
-      stock: 15,
-      description: "High-definition smart TV with built-in streaming apps.",
-      image: "https://example.com",
-    });
-  }, []);
+  if(isError) return (
+    <h1>{error.message}</h1>
+  )
 
-  console.log(addData);
-  console.log(data);
-  
-  
-  return <div>App</div>;
-};
+  if(isLoading) return (
+    <h2>Loading...</h2>
+  )
 
-export default App;
+  if(isSuccess) {
+    return (
+      products?.map(item => (
+        <div key={`${item.name} ${item.id}`}>
+          <h2>name: {item?.name}</h2>
+          <h2>price: {item?.price}</h2>
+          <h2>category: {item?.category}</h2>
+          <br /><br />
+        </div>
+      ))
+    )
+  }
+}
+
+export default App
