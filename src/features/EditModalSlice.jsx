@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import {createSlice} from "@reduxjs/toolkit";
 
 export const editModal = createSlice({
   name: "editModal",
@@ -8,7 +8,7 @@ export const editModal = createSlice({
     product: null,
   },
   reducers: {
-    openModal: (state,action) =>{
+    openModal: (state, action) => {
       state.isOpen = true;
       state.product = action.payload;
     },
@@ -18,9 +18,9 @@ export const editModal = createSlice({
     closeModal: (state) => {
       state.isOpen = false;
       state.product = null;
-    }
-  }
-})
+    },
+  },
+});
 
-export const {openModal, closeModal, openAddModal} = editModal.actions
+export const {openModal, closeModal, openAddModal} = editModal.actions;
 export default editModal.reducer;
